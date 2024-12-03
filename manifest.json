@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Submit Guard for Perplexity",
+  "name": "Submit Guard",
   "description": "Prevents unintended form submissions",
   "version": "1.0.0",
   "permissions": ["activeTab"],
-  "host_permissions": ["https://www.perplexity.ai/*"],
+  "host_permissions": [
+    "https://www.perplexity.ai/*",
+    "https://notebooklm.google.com/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://www.perplexity.ai/*"],
+      "matches": [
+        "https://www.perplexity.ai/*",
+        "https://notebooklm.google.com/*"
+      ],
       "js": ["content.js"]
     }
   ],
